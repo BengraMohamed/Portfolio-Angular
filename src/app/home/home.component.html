@@ -1,0 +1,106 @@
+<section class="text-center text-white py-5 home-parent position-relative overflow-hidden">
+  <!-- Gradient Background -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-1">
+    <!-- Profile Image -->
+    <div class="mx-auto div-img" style="max-width: 200px;">
+      <img
+        src="assets/IMG_20230608_211517_063.jpg"
+        class="w-100 photo rounded-circle border-4 border-white shadow-lg"
+        alt="Mohamed BENGRA"
+        style="border: 4px solid #919447;"
+      />
+    </div>
+
+    <!-- Info Section -->
+    <div class="info mt-4">
+      <h1 class="display-4 fw-bold text-gradient">Mohamed BENGRA</h1>
+      <h2 class="h3 fw-bold text-uppercase" style="color: #919447;">MERN Stack Developer</h2>
+
+      <!-- Divider with Star Icon -->
+      <div class="d-flex justify-content-center align-items-center text-white mt-3">
+        <div class="line me-3" style="width: 50px; height: 2px; background: #919447;"></div>
+        <i class="fa-solid fa-star fs-4" style="color: #919447;"></i>
+        <div class="line ms-3" style="width: 50px; height: 2px; background: #919447;"></div>
+      </div>
+
+      <!-- Personal Info -->
+      <div class="personal-info mt-3">
+        <p class="lead">Front End Developer (React.js + Laravel)</p>
+      </div>
+
+      <!-- Tech Stack Icons -->
+      <div class="tech-stack mt-4">
+        <h3 class="h4 fw-bold mb-3" style="color: #919447;">Tech Stack</h3>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <div class="tech-icon" data-tooltip="React">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="img-fluid" style="width: 50px;" />
+          </div>
+          <div class="tech-icon" data-tooltip="Node.js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="img-fluid" style="width: 50px;" />
+          </div>
+          <div class="tech-icon" data-tooltip="MongoDB">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="img-fluid" style="width: 50px;" />
+          </div>
+          <div class="tech-icon" data-tooltip="Express">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="img-fluid" style="width: 50px;" />
+          </div>
+          <div class="tech-icon" data-tooltip="Laravel">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-plain.svg" alt="Laravel" class="img-fluid" style="width: 50px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS for styling -->
+<style>
+  .home-parent {
+    background: linear-gradient(135deg, #919447, #1e3c72);
+  }
+  .bg-gradient {
+    background: linear-gradient(135deg, rgba(145, 148, 71, 0.8), rgba(30, 60, 114, 0.8));
+    z-index: 0;
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #919447, #d4d7a2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .tech-icon {
+    transition: transform 0.3s ease;
+  }
+  .tech-icon:hover {
+    transform: scale(1.2);
+  }
+  .tech-icon img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  .tech-icon:hover img {
+    filter: grayscale(0%);
+  }
+  .tech-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .tech-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>

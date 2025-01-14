@@ -1,0 +1,149 @@
+<section class="contact-page-section py-5 position-relative overflow-hidden">
+  <!-- Background Gradient -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient"></div>
+
+  <!-- SVG Wave Decoration -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index: -1;">
+    <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#919447"
+        fill-opacity="0.1"
+        d="M0,256L48,240C96,224,192,192,288,181.3C384,171,480,181,576,170.7C672,160,768,128,864,128C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg>
+  </div>
+
+  <div class="container position-relative z-1">
+    <!-- Section Title -->
+    <div class="sec-title text-center mb-5">
+      <div class="title text-uppercase text-muted" style="color: #919447;">Contact Us</div>
+      <h2 class="display-4 fw-bold text-white">Let's Get in Touch</h2>
+      <div class="d-flex justify-content-center align-items-center mt-3">
+        <div class="line me-3" style="width: 50px; height: 2px; background: #919447;"></div>
+        <i class="fas fa-star fs-4" style="color: #919447;"></i>
+        <div class="line ms-3" style="width: 50px; height: 2px; background: #919447;"></div>
+      </div>
+    </div>
+
+    <!-- Inner Container -->
+    <div class="inner-container">
+      <div class="row g-4">
+        <!-- Contact Info Column -->
+        <div class="col-md-6">
+          <div class="contact-info p-4 shadow-lg rounded-3" style="background: rgba(255, 255, 255, 0.9);">
+            <h2 class="fw-bold mb-4" style="color: #919447;">Contact Info</h2>
+            <ul class="list-unstyled">
+              <li class="mb-4 d-flex align-items-center">
+                <i class="fas fa-map-marker-alt me-3 fs-4" style="color: #919447;"></i>
+                <span>Agadir, Morocco, 80 000</span>
+              </li>
+              <li class="mb-4 d-flex align-items-center">
+                <i class="far fa-envelope me-3 fs-4" style="color: #919447;"></i>
+                <span>mohamed.bengra@outlook.com</span>
+              </li>
+              <li class="mb-4 d-flex align-items-center">
+                <i class="fas fa-phone me-3 fs-4" style="color: #919447;"></i>
+                <span>+212 689 90 17 98</span>
+              </li>
+            </ul>
+
+            <!-- Social Icons -->
+            <h3 class="fw-bold mt-5 mb-3" style="color: #919447;">Follow Me</h3>
+            <ul class="list-inline social-icons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/_B13X_" class="btn btn-outline-secondary btn-lg rounded-circle">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/mohamed-bengra-529971233/" class="btn btn-outline-secondary btn-lg rounded-circle">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/BengraMohamed" class="btn btn-outline-secondary btn-lg rounded-circle">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/_b13x_/" class="btn btn-outline-secondary btn-lg rounded-circle">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Form Column -->
+        <div class="col-md-6">
+          <div class="contact-form p-4 shadow-lg rounded-3" style="background: rgba(255, 255, 255, 0.9);">
+            <h2 class="fw-bold mb-4" style="color: #919447;">Send a Message</h2>
+            <form method="post" action="sendemail.php" id="contact-form">
+              <div class="mb-3">
+                <input type="text" name="name" class="form-control form-control-lg" placeholder="Your Name" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" name="email" class="form-control form-control-lg" placeholder="Your Email" required />
+              </div>
+              <div class="mb-3">
+                <input type="text" name="subject" class="form-control form-control-lg" placeholder="Subject" required />
+              </div>
+              <div class="mb-3">
+                <input type="text" name="phone" class="form-control form-control-lg" placeholder="Phone Number" required />
+              </div>
+              <div class="mb-3">
+                <textarea name="message" class="form-control form-control-lg" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-lg text-white" style="background-color: #919447;">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS for styling -->
+<style>
+  .contact-page-section {
+    background: linear-gradient(135deg, #919447, #1e3c72);
+  }
+  .bg-gradient {
+    background: linear-gradient(135deg, rgba(145, 148, 71, 0.8), rgba(30, 60, 114, 0.8));
+    z-index: 0;
+  }
+  .contact-info,
+  .contact-form {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .contact-info:hover,
+  .contact-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  .social-icons .btn-outline-secondary {
+    border-color: #919447;
+    color: #919447;
+  }
+  .social-icons .btn-outline-secondary:hover {
+    background-color: #919447;
+    color: white;
+  }
+  .form-control {
+    border: 1px solid #919447;
+  }
+  .form-control:focus {
+    border-color: #919447;
+    box-shadow: 0 0 0 0.2rem rgba(145, 148, 71, 0.25);
+  }
+  svg {
+    animation: float 6s infinite ease-in-out;
+  }
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+</style>
