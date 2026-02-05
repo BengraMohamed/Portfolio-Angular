@@ -1,27 +1,168 @@
+/* ===== NAVBAR BASE ===== */
+.dev-navbar {
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.35s ease;
+  padding: 1.2rem 0;
+}
 
-.navbar{
-  background-color: #2c3e50;
-  padding: 15px 0;
-  transition: padding 0.5s;
-  -webkit-transition: padding 0.5s;
-  -moz-transition: padding 0.5s;
-  -ms-transition: padding 0.5s;
-  -o-transition: padding 0.5s;
+/* On scroll */
+.dev-navbar.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  padding: 0.6rem 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
-.nav-link{
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
+
+/* ===== BRAND ===== */
+.dev-brand {
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  color: #eaeaea;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
-.navbar-brand {
-  color: white;
-  font-size: 30px;
+
+.brand-code {
+  font-family: "JetBrains Mono", monospace;
+  color: #3cffb2;
+  font-size: 0.9rem;
 }
-.test{
-  background-color: #919447;
+
+.dev-brand:hover {
+  color: #d4af37;
 }
-@media screen and (max-width:700px) {
-  .navbar-brand{
-    font-size: 20px;
+
+/* ===== NAV LINKS ===== */
+.navbar-nav .nav-link {
+  color: #cfcfcf;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-left: 1.6rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline (cinematic line) */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #d4af37, transparent);
+  transition: width 0.35s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active route */
+.navbar-nav .nav-link.active {
+  color: #d4af37;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* ===== CTA LINK ===== */
+.nav-cta {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  margin-left: 2rem;
+  color: #d4af37 !important;
+}
+
+.nav-cta:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* ===== TOGGLER ===== */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(12, 12, 12, 0.95);
+    margin-top: 1rem;
+    border-radius: 12px;
+    padding: 1.2rem;
   }
+
+  .navbar-nav .nav-link {
+    margin: 0.8rem 0;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+/* icon */
+.brand-code-anim {
+  font-family: "JetBrains Mono", monospace;
+  color: #d4af37;
+  font-size: 0.95rem;
+  animation: codeBlink 1.8s infinite;
+}
+
+@keyframes codeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* ===== CONTACT CTA ===== */
+.nav-contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #d4af37 !important;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* Icon */
+.nav-contact-cta i {
+  font-size: 0.85rem;
+  transition: transform 0.35s ease;
+}
+
+/* Hover */
+.nav-contact-cta:hover {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 0 6px rgba(212,175,55,0.05);
+}
+
+/* Icon motion */
+.nav-contact-cta:hover i {
+  transform: translateX(4px);
+}
+
+/* Active route */
+.nav-contact-cta.active {
+  background: rgba(212, 175, 55, 0.12);
 }
