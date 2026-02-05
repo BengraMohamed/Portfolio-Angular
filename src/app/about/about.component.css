@@ -1,24 +1,87 @@
+/* ===== SECTION BASE ===== */
+.about-dev-cinematic {
+  min-height: 100vh;
+  padding: 6rem 0;
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.06), transparent 45%),
+    #0a0a0a;
+  color: #eaeaea;
+  font-family: "Inter", system-ui, sans-serif;
+}
 
-.about-parent{
-    background-color: #919447;
+/* ===== HEADER ===== */
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
 }
-.line{
-    width: 80px;
-    height: 4px;
-    background-color: white;
+
+.about-header h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
 }
-.info{
-    margin-top: 70px;
+
+/* ===== DIVIDER ===== */
+.tech-divider {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-.info h2{
-    font-size: 40px;
+
+.tech-divider span {
+  width: 90px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
 }
-@media screen and (max-width:800px) {
-    .info h2{
-        font-size: 25px;
-    }
+
+.tech-divider i {
+  color: #d4af37;
+  font-size: 0.85rem;
 }
-.info-left,
-.info-right p {
-    font-size: 17px;
+
+/* ===== ABOUT CARD ===== */
+.about-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ===== TEXT ===== */
+.about-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #cfcfcf;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== SKILLS ===== */
+.about-skills {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about-skills span {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  background: rgba(60,255,178,0.08);
+  border: 1px solid rgba(60,255,178,0.25);
+  color: #3cffb2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-card {
+    padding: 2rem;
+  }
 }
