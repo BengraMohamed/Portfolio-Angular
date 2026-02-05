@@ -1,54 +1,61 @@
-<nav class="navbar navbar-expand-lg fixed-top " [ngClass]="{'py-0': isScrolled}" (window:scroll)="onScroll()">
+<nav
+  class="navbar navbar-expand-lg fixed-top dev-navbar"
+  [class.scrolled]="isScrolled"
+  (window:scroll)="onScroll()"
+>
   <div class="container">
- <a class="navbar-brand fw-bold" routerLink="home">
-  FULL STACK DEVELOPER  <i class="fas fa-laptop-code me-2"></i>
-</a>    <button
+
+    <!-- Brand -->
+    <a class="navbar-brand dev-brand" routerLink="home">
+      <span class="brand-code-anim">&lt;/&gt;</span>
+
+      Mohamed Bengra
+    </a>
+
+    <!-- Toggle -->
+    <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Links -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
         <li class="nav-item">
-          <a
-            class="nav-link me-3"
-            routerLink="home"
-            routerLinkActive=" rounded-3 test"
-            >Home </a>
-          
+          <a class="nav-link" routerLink="home" routerLinkActive="active">
+            Home
+          </a>
         </li>
 
         <li class="nav-item">
-         <a
-           class="nav-link me-3"
-           routerLink="projects"
-           routerLinkActive=" rounded-3 test"
-           >Projects </a>
-         
-       </li>
-         <li class="nav-item">
-          <a
-            class="nav-link me-3"
-            aria-current="page"
-            routerLink="about"
-            routerLinkActive=" rounded-3 test"
-            >ABOUT</a
-          >
-        </li> 
-        <li class="nav-item me-3">
-          <a
-            class="nav-link"
-            routerLink="contact"
-            routerLinkActive=" rounded-3 test"
-            >CONTACT</a
-          > 
-         </li> 
+          <a class="nav-link" routerLink="projects" routerLinkActive="active">
+            Projects
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active">
+            About
+          </a>
+        </li>
+
+       <li class="nav-item">
+  <a
+    class="nav-link nav-contact-cta"
+    routerLink="contact"
+    routerLinkActive="active"
+  >
+    <i class="fa-solid fa-paper-plane"></i>
+    Contact
+  </a>
+</li>
+
+
       </ul>
     </div>
   </div>
