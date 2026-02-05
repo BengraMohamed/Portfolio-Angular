@@ -1,138 +1,55 @@
-<style>
-  .about-parent {
-    background-color: #919447;
-  }
-  .line {
-    width: 80px;
-    height: 4px;
-    background-color: white;
-  }
-  .info {
-    margin-top: 70px;
-  }
-  .info h2 {
-    font-size: 40px;
-  }
-  @media screen and (max-width: 800px) {
-    .info h2 {
-      font-size: 25px;
-    }
-  }
-  .info-left,
-  .info-right p {
-    font-size: 17px;
-  }
+<section class="about-dev-cinematic">
 
-  .info h2 {
-    font-size: 2.5rem;
-    color: white;
-    animation: fadeInDown 1s ease-in-out;
-  }
+  <!-- HEADER -->
+  <div class="about-header">
+    <h1>About Me</h1>
 
-  .color .line {
-    width: 80px;
-    height: 4px;
-    background-color: #007bff;
-    animation: growLine 1s ease-in-out;
-  }
-
-  .color .fa-star {
-    color: #007bff;
-    animation: spinStar 1s ease-in-out;
-  }
-
-  .portfolio-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .portfolio-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .portfolio-item img {
-    transition: transform 0.3s ease;
-  }
-
-  .portfolio-item:hover img {
-    transform: scale(1.1);
-  }
-
-  .modal-content {
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .modal-body h3 {
-    font-size: 1.5rem;
-    color: #333;
-    animation: fadeInUp 1s ease-in-out;
-  }
-
-  /* Animations */
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes growLine {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 80px;
-    }
-  }
-
-  @keyframes spinStar {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-<section class="text-center text-white py-5 about-parent">
-  <div class="info py-2">
-    <h2 class="fw-bold">ABOUT</h2>
-    <div class="d-flex justify-content-center align-items-center color mt-3">
-      <div class="line me-3"></div>
-      <i class="fa-solid fa-star"></i>
-      <div class="line ms-3"></div>
+    <div class="tech-divider">
+      <span></span>
+      <i class="fa-solid fa-user-gear"></i>
+      <span></span>
     </div>
   </div>
 
-  <div class="container py-5">
-    <div class="row px-5">
-      <div class="">
-        <div class="info-">
-          <h3>It is my privilege to introduce myself as a talented,
-            ambitious, and hardworking individual with a wealth of experience and skills in full-stack development,
-            UI/UX design, and video editing.
-          </h3>
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <div class="about-card">
+          <p class="about-text">
+            I am a Full-stack Developer with a strong focus on building
+            scalable, maintainable, and high-performance web applications.
+            My experience spans across modern JavaScript frameworks,
+            backend architectures, and real-world production systems.
+          </p>
+
+          <p class="about-text">
+            I approach software development with an engineering mindset:
+            clean architecture, thoughtful design decisions, and
+            long-term maintainability are always priorities.
+          </p>
+
+          <p class="about-text">
+            I enjoy working on complex problems, transforming ideas
+            into reliable digital products, and continuously improving
+            both code quality and user experience.
+          </p>
+
+          <!-- SKILLS SNAPSHOT -->
+          <div class="about-skills">
+            <span>React</span>
+            <span>MongoDB</span>
+            <span>Node.js</span>
+            <span>Laravel</span>
+            <span>Angular</span>
+            <!-- <span>Firebase</span> -->
+            <!-- <span>REST APIs</span> -->
+          </div>
         </div>
+
       </div>
     </div>
   </div>
+
 </section>
