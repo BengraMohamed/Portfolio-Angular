@@ -1,322 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <style>
-      /* Custom Styles */
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f8f9fa;
-      }
+<section class="projects-dev-cinematic">
 
-      .portfolio-parent {
-        background-color: #ffffff;
-        padding: 60px 0;
-      }
+  <!-- HEADER -->
+  <div class="projects-header">
+    <h1>Selected Projects</h1>
 
-      .info h2 {
-        font-size: 2.5rem;
-        color: #333;
-        animation: fadeInDown 1s ease-in-out;
-      }
+    <div class="tech-divider">
+      <span></span>
+      <i class="fa-solid fa-diagram-project"></i>
+      <span></span>
+    </div>
 
-      .color .line {
-        width: 80px;
-        height: 4px;
-        background-color: #007bff;
-        animation: growLine 1s ease-in-out;
-      }
+    <p>
+      A curated selection of real-world applications focused on performance,
+      scalability, and clean architecture.
+    </p>
+  </div>
 
-      .color .fa-star {
-        color: #007bff;
-        animation: spinStar 1s ease-in-out;
-      }
+  <!-- PROJECT GRID -->
+  <div class="container">
+    <div class="row g-4">
 
-      .portfolio-item {
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .portfolio-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .portfolio-item img {
-        transition: transform 0.3s ease;
-      }
-
-      .portfolio-item:hover img {
-        transform: scale(1.1);
-      }
-
-      .modal-content {
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .modal-body h3 {
-        font-size: 1.5rem;
-        color: #333;
-        animation: fadeInUp 1s ease-in-out;
-      }
-
-      /* Animations */
-      @keyframes fadeInDown {
-        0% {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes growLine {
-        0% {
-          width: 0;
-        }
-        100% {
-          width: 80px;
-        }
-      }
-
-      @keyframes spinStar {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <section class="portfolio-parent py-5 text-center home-parent">
-      <div class="info py-5">
-        <h2 class="fw-bold">PROJECTS REALISED</h2>
-        <div
-          class="d-flex justify-content-center align-items-center color mt-3"
+      <!-- PROJECT CARD -->
+      <div class="col-md-4">
+        <a
+          href="https://it-cert01.com/"
+          target="_blank"
+          class="project-card"
         >
-          <div class="line me-3"></div>
-          <i class="fa-solid fa-star"></i>
-          <div class="line ms-3"></div>
-        </div>
+          <div class="project-thumb">
+            <img src="assets/portfolio/it-cert01.png" alt="IT Certification" />
+          </div>
+
+          <div class="project-content">
+            <h3>IT Certification Platform</h3>
+            <p>Production-ready certification platform with authentication and admin workflows.</p>
+
+            <div class="project-stack">
+              <span>Angular</span>
+              <span>Firebase</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </a>
       </div>
 
-      <div class="container">
-        <div class="row g-3">
-          <!-- New Project: IT-CERT01 -->
-          <div class="col-md-4">
-            <a
-              href="https://it-cert01.com/"
-              target="_blank"
-              class="portfolio-item position-relative cursor-pointer text-decoration-none"
-            >
-              <figure>
-                <img
-                  src="assets/portfolio/it-cert01.png"
-                  class="w-100"
-                  alt="IT Certification Project"
-                />
-              </figure>
-              <h3 class="info my-5">IT CERTIFICATION PROJECT</h3>
-            </a>
+      <!-- PROJECT CARD -->
+      <div class="col-md-4">
+        <div
+          class="project-card"
+          data-bs-toggle="modal"
+          data-bs-target="#Modal2"
+        >
+          <div class="project-thumb">
+            <img src="assets/portfolio/prj2.png" alt="DPEE News" />
           </div>
 
-          <!-- Existing Projects -->
-          <div class="col-md-4">
-            <div
-              class="portfolio-item position-relative cursor-pointer"
-              data-bs-toggle="modal"
-              data-bs-target="#Modal2"
-            >
-              <figure>
-                <img src="assets/portfolio/prj2.png" class="w-100" alt="" />
-              </figure>
-              <h3 class="info my-5">DPEE NEWS PROJECT</h3>
-            </div>
-          </div>
-<!--           <div class="col-md-4"> -->
-<!--             <div
-              class="portfolio-item position-relative cursor-pointer"
-              data-bs-toggle="modal"
-              data-bs-target="#Modal1"
-            >
-              <figure>
-                <img src="assets/portfolio/prj1.png" class="w-100" alt="" />
-              </figure>
-              <h3 class="info my-5">MUSIC PLATFORME PROJECT</h3>
-            </div> -->
-<!--           </div> -->
+          <div class="project-content">
+            <h3>DPEE News System</h3>
+            <p>Internship project focused on structured content management and performance.</p>
 
-<!--           <div class="col-md-4">
-            <div
-              class="portfolio-item position-relative cursor-pointer"
-              data-bs-toggle="modal"
-              data-bs-target="#Modal3"
-            >
-              <figure>
-                <img src="assets/portfolio/prj3.png" class="w-100" alt="" />
-              </figure>
-              <h3 class="info my-5">CAR DEALERSHIP PROJECT</h3>
-            </div>
-          </div> -->
-          <div class="col-md-4">
-            <div
-              class="portfolio-item position-relative cursor-pointer"
-              data-bs-toggle="modal"
-              data-bs-target="#Modal4"
-            >
-              <figure>
-                <img src="assets/portfolio/prj4b.png" class="w-100" alt="" />
-              </figure>
-              <h3 class="info my-5">SCHOOL PROJECT ABOUT CAR MAINTENANCE </h3>
+            <div class="project-stack">
+              <span>Laravel</span>
+              <span>Vite</span>
+              <span>MySQL</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Modals -->
-      <!-- Modal for DPEE MINISTRY NEWS PROJECT -->
-      <div
-        class="modal fade"
-        id="Modal2"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fa-solid fa-xmark fs-4 text-info"></i>
-              </button>
-            </div>
-            <div class="modal-body p-0">
-              <img src="assets/portfolio/prj2.png" class="w-100" alt="" />
-              <h3 class="info my-5">PROJECT CREATED BY LARAVEL & VITE</h3>
+      <!-- PROJECT CARD -->
+      <div class="col-md-4">
+        <div
+          class="project-card"
+          data-bs-toggle="modal"
+          data-bs-target="#Modal4"
+        >
+          <div class="project-thumb">
+            <img src="assets/portfolio/prj4b.png" alt="Car Maintenance" />
+          </div>
+
+          <div class="project-content">
+            <h3>Car Maintenance System</h3>
+            <p>School project emphasizing modular architecture and API integration.</p>
+
+            <div class="project-stack">
+              <span>React</span>
+              <span>Laravel</span>
+              <span>REST API</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Modal for MUSIC PLATFORME PROJECT -->
-<!--       <div
-        class="modal fade"
-        id="Modal1"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fa-solid fa-xmark fs-4 text-info"></i>
-              </button>
-            </div>
-            <div class="modal-body p-0">
-              <img src="assets/portfolio/prj1.png" class="w-100" alt="" />
-              <h3 class="info my-5">
-                PROJECT CREATED BY HTML & CSS & JAVASCRIPT
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
- -->
-      <!-- Modal for CAR DEALERSHIP PROJECT -->
-<!--       <div
-        class="modal fade"
-        id="Modal3"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fa-solid fa-xmark fs-4 text-info"></i>
-              </button>
-            </div>
-            <div class="modal-body p-0">
-              <img src="assets/portfolio/prj3.png" class="w-100" alt="" />
-              <h3 class="info my-5">PROJECT CREATED BY LARAVEL</h3>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Modal for CAR MAINTENANCE PROJECT -->
-      <div
-        class="modal fade"
-        id="Modal4"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fa-solid fa-xmark fs-4 text-info"></i>
-              </button>
-            </div>
-            <div class="modal-body p-0">
-              <img src="assets/portfolio/prj4.png" class="w-100" alt="" />
-              <h3 class="info my-5">PROJECT CREATED BY REACTJS & LARAVEL</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+    </div>
+  </div>
+</section>
