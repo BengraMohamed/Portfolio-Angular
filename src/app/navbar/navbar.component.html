@@ -1,0 +1,62 @@
+<nav
+  class="navbar navbar-expand-lg fixed-top dev-navbar"
+  [class.scrolled]="isScrolled"
+  (window:scroll)="onScroll()"
+>
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand dev-brand" routerLink="home">
+      <span class="brand-code-anim">&lt;/&gt;</span>
+
+      Mohamed Bengra
+    </a>
+
+    <!-- Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="active">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="projects" routerLinkActive="active">
+            Projects
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active">
+            About
+          </a>
+        </li>
+
+       <li class="nav-item">
+  <a
+    class="nav-link nav-contact-cta"
+    routerLink="contact"
+    routerLinkActive="active"
+  >
+    <i class="fa-solid fa-paper-plane"></i>
+    Contact
+  </a>
+</li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
